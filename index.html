@@ -18,6 +18,7 @@
     <!-- Custom CSS -->
     <link href="css/creative.css" rel="stylesheet">
     
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 
 
@@ -33,37 +34,44 @@
 <body>
 
     <!-- Navigation -->
-    <nav id="mainNav" class="navbar navbar-responsive navbar-inverse navbar-fixed-top">
+    <nav id="mainNav" class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <a class="navbar-brand page-scroll" href="#page-top">Silencio</a>
             </div>
             
-            <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="#">Mumbai</a>
-                    </li>
+            <ol class="nav navbar-nav navbar-right">
                     <button class="btn navbar-btn btn-link">
-                        <img src="img/20160406_570477e158580-210x210.png" width="20"  />
+                        <img src="img/20160406_570477e158580-210x210.png" href="" width="20"/>
                     </button>
-            </ul>
+                    <li>
+                        <a href="#"><span id="city"></span></a>
+                    </li>
+            </ol>   
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container-fluid -->
     </nav>
-
+    
    <header id="top" class="header">
         <div class="text-vertical-center">
             <center><img class="img-responsive" src="img/Placeholder+Logo.png" width="250px" height="250px" align="middle"/></center>
             <font  color="white"><h3>Download the app now!</h3></font>
             <br>
-             <div colum class="mainAction">
-                <button class="btn btn-danger btn-fixed btn-lg" href="" 
-                   <img src="ico_android.png" /> Android</button>
-                <a class="btn btn-success btn-lg" href="">Windows</a>
-                <a class="btn btn-primary btn-lg" href="">Ios</a>
-             </div>
+            
+            <ol class="row">
+                <div>
+                    <img  class="img-responsive" src="img/ico_android1.png" width="70" onmouseover="bigImg(this)" onmouseout="normalImg(this)" />
+                </div>
+                <div>
+                    <img  class="img-responsive" src="img/ico_windows.png" width="70" onmouseover="bigImg(this)" onmouseout="normalImg(this)" />
+                </div>
+                <div>
+                    <img  class="img-responsive" src="img/ico_ios.png" width="70" onmouseover="bigImg(this)" onmouseout="normalImg(this)" />
+                </div>
+            </ol>
+            
         </div>
     </header>
 
@@ -74,11 +82,45 @@
     <script src="js/bootstrap.min.js"></script>
 
     <!-- Script to Activate the Carousel -->
-    <script>
+<script>
     $('.carousel').carousel({
         interval: 5000 //changes the speed
     })
-    </script>
+</script>
+    
+<script>
+    
+	var city = document.getElementById('city');
+	           
+	function callback(data)
+	{
+		city.innerHTML = data.city;
+	}
+
+	var script = document.createElement('script');
+	script.type = 'text/javascript';
+	script.src = 'https://geoip-db.com/jsonp';
+	var h = document.getElementsByTagName('script')[0];
+	h.parentNode.insertBefore(script, h);
+	           
+</script>
+    
+<script>
+
+    function bigImg(x) 
+    {
+    x.style.height = "72px";
+    x.style.width = "72px";
+    }
+    
+    function normalImg(x) 
+    {
+    x.style.height = "70px";
+    x.style.width = "70px";
+    }
+</script>
+
+
 
 </body>
 
