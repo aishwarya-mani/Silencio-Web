@@ -54,26 +54,27 @@
         <!-- /.container-fluid -->
     </nav>
     
-   <header id="top" class="header">
+     <header id="top" class="header">
         <div class="text-vertical-center">
             <center><img class="img-responsive" src="img/Placeholder+Logo.png" width="250px" height="250px" align="middle"/></center>
             <font  color="white"><h3>Download the app now!</h3></font>
             <br>
             
-            <ol class="row">
-                <div>
-                    <img  class="img-responsive" src="img/ico_android1.png" width="70" onmouseover="bigImg(this)" onmouseout="normalImg(this)" />
-                </div>
-                <div>
-                    <img  class="img-responsive" src="img/ico_windows.png" width="70" onmouseover="bigImg(this)" onmouseout="normalImg(this)" />
-                </div>
-                <div>
-                    <img  class="img-responsive" src="img/ico_ios.png" width="70" onmouseover="bigImg(this)" onmouseout="normalImg(this)" />
-                </div>
-            </ol>
             
+            <div class="store-links col-l-10">
+                <a class="pr20" target="_blank" href="Android.html"=>
+                    <img src="img/android.png" alt="Download Silencio for Android" height="70" onmouseover="bigImg(this)" onmouseout="normalImg(this)" >
+                </a>
+                <a class="pr20" target="_blank" href="Windows.html">
+                    <img src="img/windows.png" alt="Download Silencio for Windows" height="70" onmouseover="bigImg(this)" onmouseout="normalImg(this)">
+                </a>
+                <a class="pr20" target="_blank" href="ios.html">
+                    <img src="img/ios.png" alt="Download Silencio for iOS" height="70" onmouseover="bigImg(this)" onmouseout="normalImg(this)">
+                </a>
+            </div> 
         </div>
     </header>
+  
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
@@ -109,8 +110,8 @@
 
     function bigImg(x) 
     {
-    x.style.height = "72px";
-    x.style.width = "72px";
+    x.style.height = "75px";
+    x.style.width = "75px";
     }
     
     function normalImg(x) 

@@ -40,11 +40,11 @@ body {
     position: relative;
     width: 100%;
     height: 100%;
-    background: url(../img/b1.jpg)no-repeat center center scroll;
+    background: url(../img/b1.jpg)no-repeat center center scroll; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
-    -o-background-size: cover;
+    -o-background-size: cover; 
 }
 
 .text-vertical-center {
@@ -60,22 +60,6 @@ body {
     font-weight: 700;
 }
 
-.row {
-    display: inline-block;
-    vertical-align: middle;
-    align-content: center;
-}
-
-.row r1 {
-    margin: 0;
-    padding: 0;
-}
-
 footer {
     margin: 50px 0;
-}
-
-.mainpitch {
-        padding: 70px 0;
-    text-align: center;
 }
